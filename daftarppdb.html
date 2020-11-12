@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="logo.png">
+	<title>Pengisian Formulir PPDB</title>
+	<meta name ="description" content = "web pendaftaran peserta didik baru smpn 1 ganding" >
+	<meta name = "keywords" content = "ppdb, smp ganding, smpn 1 ganding, smp 1 ganding" >
+	<meta name = "author" content="Rafli Firdaus Falaka">
+<style type="text/css">
+	#gradient1 {background-image: linear-gradient(to right,blue,skyblue,blue );
+</style>
+</head>
+<div id="gradient1">
+<body >
+	<center><h1>Persyaratan Calon Peserta Didik Baru</h1></center>
+<br>
+<ol>
+	<li>Mengisi formulir online yang sudah disediakan</li>
+	<li>Fotocopy Kartu keluarga</li>
+	<li>Fotocopy Akta Kelahiran</li>
+	<li>Fotocopy SKL beserta aslinya</li>
+	<li>Fotocopy Ijazah beserta aslinya</li>
+	<li>Foto copy SKHUN beserta aslinya*</li>
+</ol>
+<p>Keterangan * bila ada</p>
+	<center><h1>Pengisian Formulir PPDB</h1></center>
+<dl>
+	<dt><strong>Formulir online</strong></dt>
+	<dd>Formulir online ini otomatis akan masuk ke operator sekolah,jadi adik adik tidak perlu mencetaknya.jika ada kesalahan dalam pengisian data silahkan hubungi panitia PPDB.</dd>
+	<dt><strong>Fotocopy KK,Akta kelahiran dan SKL</strong></dt>
+	<dd>Untuk berkas diatas cukup sediakan Fotocopy saja,dan disetorkan ke SMP Negeri 1 Ganding jika sudah diminta.</dd>
+</dl>
+<br>
+	<h2>Silahkan isi formulir dibawah</h2>
+	<form action="" method="get">
+<p>	<label>Nama Lengkap		:</label>
+	<input type="text" name="nama">
+</p>	
+<p>	<label>Tempat Lahir		:</label> 
+	<input type="text" name="tempat">
+</p>	
+<p>	<label>Tanggal Lahir	:</label> 
+	<input type="date" name="tanggal">
+</p>	
+<P>	<label>Asal sekolah 	:</label> 
+	<input type="text" name="sekolah">
+</P>	
+<p>	<label>Jenis Kelamin 	:</label>
+	<label><input type="radio" name="jenis_kelamin" value="Laki - Laki">Laki-Laki</label>
+	<label><input type="radio" name="jenis_kelamin" value="perempuan">Perempuan</label>
+</p>
+<p>	<label>Agama			:</label>
+	<select name="agama">
+		<option value= "islam">Islam</option>
+		<option value= "kristen">Kristen</option>
+		<option value= "hindu">Hindu</option>
+		<option value= "budha">Budha</option>
+		<option value= "katolik">Katolik</option>
+	</select>
+</p>	
+<p>	<button type="submit">Daftar Sekarang</button></p>
+	</form>
+<div id="result"></div>
+
+<script>
+	// Check Browser support
+	if(typeof(storage)!=="undefined")
+	{
+		//Store
+		localStorage.setitem("lastname","Smith");
+		//Retrive
+		document.getElementById("result").innerHTML=localstorage.getitem("lastname");
+	}
+	else
+	{
+		document.getElementById("result").innerHTML="Mohon maaf browser anda tidak mendukung penyimpanan data";
+	}
+</script>
+<br>
+<a href="index.html"><button>Kembali ke halaman utama</button></a>
+<p>Klik tombol untuk menampilkan lokasi anda</p>
+<button onclick="getLocation()">Tampilkan Lokasi Anda</button>
+<p id="demo"></p>
+<script>
+	var x = document.getElementById("demo");
+
+	function getLocation()
+	{
+		if (navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+		else
+		{
+			x.innerHTML="Geolocation Tidak Mendukung di Browser Ini";
+		}
+	}
+	function showPosition(position)
+	{
+		x.innerHTML="latitude:"+position.coords.latitude+"<br>Longitude:"+position.coords.longitude;
+	}	
+</script>
+</div>
+</body>
+</html>

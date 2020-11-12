@@ -1,0 +1,95 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="logo.png">
+	<title>SMP NEGERI 1 GANDING</title>
+	<meta name ="description" content = "web pendaftaran peserta didik baru smpn 1 ganding" >
+	<meta name = "keywords" content = "ppdb, smp ganding, smpn 1 ganding, smp 1 ganding" >
+	<meta name = "author" content="Rafli Firdaus Falaka">
+	<style type="text/css">	
+		h1 { 
+			color: black; 
+			font-family: times new roman;
+			font-size: 50px ;
+			font-style: oblique;
+			text-transform: uppercase;
+			display: inline-grid;
+			cursor: pointer;}
+
+		p {text-indent: 100px}
+
+		button { background-color: gray ;
+				color: black;
+				padding: 15px 30px ;
+				text-align: center;
+				text-decoration: none;
+				display: inline-grid;
+				margin-right: 10px ;
+				margin-top: 15px ;
+				margin-bottom: 15px;
+				margin-left: 10px;
+				cursor: pointer;
+				font-size: 15px;
+				letter-spacing: 2px;
+				font-family: times new roman;
+				border-radius: 10px;
+				background-image:linear-gradient(to bottom right, yellow,yellow,red,blue,blue);}
+	#gradient1 {
+	  background-image: linear-gradient(to right,#191970,#4682B4, #191970 );margin:0 auto;border:5px white outset;border-left: 0px; border-right: 0px;}
+	</style>
+</head>
+
+<body>
+<div style= "background-image: linear-gradient(to bottom,black,#778899,#778899,black); margin: 0 auto; ">
+	<!-- untuk pindah link halaman baru tambahkan target="-blank" -->
+		<br><br><br><br><br>
+		<div id= "gradient1">
+	<marquee scrolldelay= "100" width= "1330" onmouseover="this.stop()" onmouseout="this.start()"><h1>SMP NEGERI 1 GANDING</h1></marquee>
+		</div>
+	<div style= "width : 80%; margin: 0 auto">
+		<center>
+			<a href="visimisi.html">	<button class="button1">Visi dan Misi</button>	</a>
+			<a href="persyaratan.html"><button class="button1">Persyaratan</button></a>
+			<a href="fasilitasdansarana.html"><button class="buton1">Fasilitas dan Sarana</button></a>
+			<a href="daftarppdb.html" target="-blank"><button class="button1">Pendaftaran</button></a>
+			<a href="infolebihlanjut.html"><button class="button1">Info</button></a>
+			<a href="gurupengajar.html"><button class="button1">Guru</button></a>
+		</center>
+	</div>
+
+	<div style = "background: linear-gradient(to bottom right, blue, skyblue, blue); width:80%; border:7px white outset; margin: 0 auto">
+<br>
+	<img src="logo.png" title="Logo SMP Negeri 1 Ganding" width="28%" style =" display: block; margin: auto; cursor:pointer; ">
+<center><h3>Media ini digunakan untuk pendaftaran siswa baru secara online</h3></center>
+<center><p><i>Tujuan dibuatnya media ini agar mempermudah siswa untuk mendaftarkan diri di SMP Negeri 1 Ganding secara online dan tanpa sibuk untuk bolak - balik menuju sekolah.</i></p></center>
+<br>
+	</div>
+
+<!-- text-indent untuk membuat paragraf menjorok ke tengah-->
+<p>Klik tombol untuk menampilkan lokasi anda</p>
+<button onclick="getLocation()">Show Location</button>
+<p id="demo"></p>
+<script>
+	var x = document.getElementById("demo");
+
+	function getLocation()
+	{
+		if (navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+		else
+		{
+			x.innerHTML="Geolocation Tidak Mendukung di Browser Ini";
+		}
+	}
+	function showPosition(position)
+	{
+		x.innerHTML="latitude:"+position.coords.latitude+"<br>Longitude:"+position.coords.longitude;
+	}	
+</script>
+	</div>
+</body>
+</html>
+				--//background-image: url('download(1).jpg');--//
